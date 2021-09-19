@@ -45,7 +45,7 @@ It has two more microservices one for eureka server and one for api gateway.
 	* <sub><sup>Exception Handling</sup></sub>
 		* <sub><sup>Global [link](./airport-pilot-service/src/main/java/com/airport/pilot/exception/PilotControllerAdvicer.java)</sup></sub>
 		* <sub><sup>Custom [link1](./airport-pilot-service/src/main/java/com/airport/pilot/exception/PilotCustomException.java), [link2](./airport-pilot-service/src/main/java/com/airport/pilot/service/PilotServiceImpl.java)</sup></sub>
-* JUnit with Jacocco
+* JUnit with Jacoco
 	+ <sub><sup>Unit Testing</sup></sub>
 		- <sub><sup>for RestController [link](./airport-pilot-service/src/test/java/com/airport/pilot/controller/PilotControllerTest.java)</sup></sub>
 	+ <sub><sup>Code Coverage  [link1](./airport-pilot-service/pom.xml), [link2](./snapshots/how%20to%20run%20code%20coverage.PNG), [link3](./snapshots/output%20of%20code%20coverage.PNG)</sup></sub>
@@ -62,19 +62,21 @@ It has two more microservices one for eureka server and one for api gateway.
 * create schema in MySQL > `CREATE DATABASE airportdb`
 * create tables by running [airportdbdump.sql](https://github.com/SirajChaudhary/microservices-using-spring-boot-with-spring-cloud/blob/master/airportdb.sql) in mysql workbench
 
-**Step 2.** Clone the project from [github](https://github.com/SirajChaudhary/microservices-using-spring-boot-with-spring-cloud.git)
+**Step 2.** Configure lombok for your eclipse IDE (i.e. run lombok.jar)
+
+**Step 3.** Clone the project from [github](https://github.com/SirajChaudhary/microservices-using-spring-boot-with-spring-cloud.git)
 > git clone https://github.com/SirajChaudhary/microservices-using-spring-boot-with-spring-cloud.git
 
-**Step 3.** Import into your eclipse IDE
+**Step 4.** Import into your eclipse IDE
 
-**Step 4.** Update your database credentials in the .properties file wherever it is used in microservices.  
+**Step 5.** Update your database credentials in the .properties file wherever it is used in microservices.  
 
-**Step 5.** Run the microservices in the following sequence.
+**Step 6.** Run the microservices in the following sequence.
 * eureka-server
 * api-gateway
 * all microservices one by one in any sequence
 
-**Step 6.** Run APIs (microservices) using OpenAPI (Swagger-UI) or Postman Client in the following sequence.
+**Step 7.** Run APIs (microservices) using OpenAPI (Swagger-UI) or Postman Client in the following sequence.
 * airport-pilot-service
 * airport-flight-service
 * airport-booking-service
@@ -82,7 +84,7 @@ It has two more microservices one for eureka server and one for api gateway.
 * airport-checkin-service
 * airport-boarding-service
 
-**Step 7 (optional).** Run Zipkin Server to trace Sleuth logs on GUI.
+**Step 8 (optional).** Run Zipkin Server to trace Sleuth logs on GUI.
 * download and install zipkin server and then [run the zipkin server](./snapshots/start-zipkin-server.PNG). Here is the [zipkin server console output](./snapshots/run-zipkin-server-and-trace-any-sleuth-request.PNG)
 
 ## Snapshots
